@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📌 Ruptrix – AI-Powered Receipt Management
 
-## Getting Started
+Ruptrix is a full-stack web application built with *Next.js, **React, **Prisma, and **Supabase*, designed to help users scan, save, and manage receipts efficiently with the power of AI.
 
-First, run the development server:
+---
 
-```bash
+## 🛠 Tech Stack
+
+- *Frontend*: Next.js, React, Tailwind CSS  
+- *Backend*: Node.js, Prisma ORM, Supabase (PostgreSQL)  
+- *AI Integration*: OCR or AI-based text extraction for scanned receipts  
+- *Authentication*: Clerk (or Supabase Auth)  
+- *Deployment*: Vercel or similar platforms  
+
+---
+
+## 🚀 Getting Started
+
+Install dependencies:
+
+bash
+npm install
+
+
+Run the development server:
+
+bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Visit https://ruptrix.vercel.app/ in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ⚙ Project Structure
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ruptrix/
+├── app/               # Main pages and routing
+├── components/        # Reusable UI components
+├── hooks/             # Custom React hooks
+├── lib/               # Utility functions and config
+├── prisma/            # Prisma schema and DB access
+├── public/            # Static files
+├── data/              # Static data (e.g., categories)
+├── actions/           # Server-side actions (API logic)
+├── .env               # Environment variables
+└── middleware.js      # Middleware for auth or logging
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧠 Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 🧾 AI-powered receipt scanning  
+- 📊 Transaction tracking and history  
+- 🔐 User authentication  
+- 📤 Manual and scanned entry support  
+- 🌐 Clean and responsive UI  
+
+---
+
+## 🧪 Prisma Setup
+
+Run Prisma migrations:
+
+bash
+npx prisma migrate dev
+
+
+Generate Prisma client:
+
+bash
+npx prisma generate
+
+
+---
+
+## 🔐 Environment Variables
+
+Create a .env file in the root with:
+
+ini
+DATABASE_URL=your_database_url
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+
+
+---
+
+## 📄 License
+
+MIT License
